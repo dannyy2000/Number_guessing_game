@@ -34,13 +34,13 @@ describe("Number Guesser Game", () => {
   });
 
   test("congratulates the user when the guess is correct", () => {
-    vi.spyOn(global.Math, "random").mockReturnValue(0.5); // Mock random number as 50
+    vi.spyOn(global.Math, "random").mockReturnValue(.5); // Mock random number as 50
 
     render(<Game />);
     const input = screen.getByPlaceholderText(/enter your guess/i);
     const button = screen.getByText(/submit guess/i);
 
-    fireEvent.change(input, { target: { value: "50" } });
+    fireEvent.change(input, { target: { value: "51" } });
     fireEvent.click(button);
 
     expect(screen.getByText(/congratulations! you guessed the number!/i)).toBeInTheDocument();
