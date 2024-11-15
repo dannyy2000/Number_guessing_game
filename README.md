@@ -27,12 +27,15 @@ If you use all attempts without guessing the number, you lose the game, and the 
 Restart the Game:
 
 After winning or losing, you can restart the game by clicking the Restart Game button.
+~~~
+
+~~~
 Optional Features
 1. Difficulty Levels
 Choose a difficulty level:
-Easy: 15 attempts.
-Medium: 10 attempts (default).
-Hard: 5 attempts.
+Easy: 10 attempts.
+Medium: 5 attempts 
+Hard: 2 attempts.
 Each level adjusts the number of allowed guesses.
 ~~~
 
@@ -52,6 +55,7 @@ Display appropriate error messages for invalid entries.
 Getting Started
 Follow these instructions to set up the project on your local machine.
 ~~~
+
 ~~~
 Prerequisites
 Node.js (v14 or later)
@@ -64,15 +68,6 @@ Technologies Used
 React: Frontend library for building the user interface.
 TypeScript: Provides type safety and improved code readability.
 CSS: For styling and animations.
-~~~
-
-~~~
-Future Enhancements
-Add a leaderboard to store and display the best scores.
-Introduce hints after a certain number of failed attempts.
-Add sound effects for correct, incorrect, and game-over scenarios.
-Contributing
-Contributions are welcome! Please fork the repository and submit a pull request with any improvements or features.
 ~~~
 
 License
