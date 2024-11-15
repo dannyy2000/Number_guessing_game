@@ -60,7 +60,8 @@ const Game: React.FC = () => {
       <button onClick={handleGuess} disabled={gameStatus !== "playing"}>
         Submit Guess
       </button>
-      <button onClick={() => setAttemptsLeft(Math.floor(attemptsLeft*.5))}>Increase difficulty</button>
+      <button onClick={() => {if(attemptsLeft<=2) return
+      setAttemptsLeft(Math.floor(attemptsLeft*.5))}}>Increase difficulty</button>
       {gameStatus !== "playing" && (
         <>
         <button onClick={restartGame} style={{ marginLeft: "10px" }}>
