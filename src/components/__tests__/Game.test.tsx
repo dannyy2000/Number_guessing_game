@@ -75,11 +75,12 @@ describe("Number Guesser Game", () => {
   });
 
   test("restarts the game when restart button is clicked", () => {
+    vi.spyOn(global.Math, "random").mockReturnValue(.5); // Mock random number as 50
     render(<Game />);
     const input = screen.getByPlaceholderText(/enter your guess/i);
     const button = screen.getByText(/submit guess/i);
 
-    fireEvent.change(input, { target: { value: "50" } });
+    fireEvent.change(input, { target: { value: "51" } });
     fireEvent.click(button);
 
     const restartButton = screen.getByText(/restart game/i);
