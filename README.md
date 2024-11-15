@@ -1,50 +1,75 @@
-# React + TypeScript + Vite
+Number Guesser Game
+~~~
+Overview
+The Number Guesser Game is a fun and interactive game where players guess a secret number between 1 and 100. The game provides feedback after each guess, indicating whether the guess is too high, too low, or correct. The player has a limited number of attempts to guess the number correctly.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+The game is built with React and TypeScript and features a simple and intuitive graphical user interface (GUI).
+~~~
 
-Currently, two official plugins are available:
+~~~
+How to Play
+Start the Game:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The game begins by generating a random secret number between 1 and 100.
+You have a limited number of attempts (default: 10).
+Make a Guess:
 
-## Expanding the ESLint configuration
+Enter a number in the input field.
+Click the Submit Guess button.
+The game will provide feedback:
+Too low: Your guess is smaller than the secret number.
+Too high: Your guess is greater than the secret number.
+Correct: You've guessed the secret number correctly and win the game!
+Track Attempts:
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+The game displays the number of remaining attempts.
+If you use all attempts without guessing the number, you lose the game, and the secret number is revealed.
+Restart the Game:
 
-- Configure the top-level `parserOptions` property like this:
+After winning or losing, you can restart the game by clicking the Restart Game button.
+~~~
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+~~~
+Optional Features
+1. Difficulty Levels
+Choose a difficulty level:
+Easy: 10 attempts.
+Medium: 5 attempts 
+Hard: 2 attempts.
+Each level adjusts the number of allowed guesses.
+~~~
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+~~~
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+2. Enhanced UI
+Styled input fields and buttons for a better look and feel.
+A progress bar that decreases as attempts are used.
+~~~
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+~~~
+
+3. Validation
+Prevent invalid input:
+The input must be a number between 1 and 100.
+Display appropriate error messages for invalid entries.
+Getting Started
+Follow these instructions to set up the project on your local machine.
+~~~
+
+~~~
+Prerequisites
+Node.js (v14 or later)
+npm or yarn
+~~~
+
+
+~~~
+Technologies Used
+React: Frontend library for building the user interface.
+TypeScript: Provides type safety and improved code readability.
+CSS: For styling and animations.
+~~~
+
+License
+This project is licensed under the MIT License. See the LICENSE file for details.
+
